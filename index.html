@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>8 puzzle</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+        <header class="game-header">
+            <section class="first-screen">
+                <p>Completa el rompecabezas!</p>
+                <img src="img/logo.jfif" alt="Logo de referencia" class="logo-preview">
+            </section>
+                <div class="timer-box">
+                    <div id="timer">0s</div>
+                </div>
+        </header>
+        
+        <div class="board hidden"></div>
+
+        <section class="start-container">
+            <button class="play-button" id="start">Empezar</button>
+        </section>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+
+</html>

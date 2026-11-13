@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Cabecera que organiza el título arriba y el temporizador al lado */
+.game-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.first-screen{
+    text-align: center;
+}
+
+/* Texto más grande, estilizado y con degradado */
+.first-screen p {
+    margin-bottom: 12px;
+    font-size: 1.4em;
+    font-weight: 800;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(to right bottom, #38bdf8, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Logo más grande */
+.logo-preview {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    border: 2px solid rgba(56, 189, 248, 0.4);
+    cursor: default;
+}
+
+/* Caja del temporizador con estilo similar al botón */
+.timer-box {
+    padding: 1.2em 1.5em;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 110px;
+    border: solid 3px transparent;
+    background: 
+        linear-gradient(#0f172a, #0f172a) padding-box,
+        linear-gradient(to right bottom, #38bdf8, #818cf8, #c084fc) border-box;
+}
+
+#timer {
+    font: 700 1.2em/ 1.25 ubuntu, sans-serif;
+    color: white;
+}
+
+/* Tablero del rompecabezas */
+.board{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+    width: 310px;
+    margin: 20px auto;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilo para las fichas del tablero */
+.board img{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 3px 3px black;
+    object-fit: cover;
+}
+
+.empty {
+    width: 100px;
+    height: 100px;
+}
+
+/* Contenedor del botón abajo */
+.start-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Botón con el estilo solicitado adaptado */
+.play-button {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: .5em;
+    margin: 1em auto;
+    border: solid 3px transparent;
+    padding: 0.8em 1.5em;
+    border-radius: 9em;
+    background: 
+        linear-gradient(#0f172a, #0f172a) padding-box,
+        linear-gradient(to right bottom, #38bdf8, #818cf8, #c084fc) border-box;
+    font: 700 1.2em/ 1.25 ubuntu, sans-serif;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.play-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}

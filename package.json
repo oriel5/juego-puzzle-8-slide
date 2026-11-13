@@ -1,0 +1,35 @@
+{
+  "name": "puzzle-8-slide",
+  "version": "1.0.0",
+  "description": "Juego rompecabezas 8 puzzle",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.9.0"
+  },
+  "build": {
+    "appId": "com.puzzle.game",
+    "productName": "8 Puzzle",
+    "win": {
+      "target": "nsis"
+    },
+    "files": [
+      "index.html",
+      "styles.css",
+      "main.js",
+      "script.js",
+      "img/**/*"
+    ]
+  },
+  "allowScripts": {
+    "electron@31.7.7": true
+  }
+}
